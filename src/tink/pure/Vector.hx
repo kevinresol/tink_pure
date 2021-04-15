@@ -63,19 +63,19 @@ abstract Vector<T>(Array<T>) to Vectorlike<T> {
     return new Vector<T>([]);
   }
 
-  @:from static function fromVector<T, R:T>(v:Vector<R>):Vector<T>
+  @:from static function fromVector<T>(v:Vector<T>):Vector<T>
     return cast v;
 
   #if macro @:from #end
-  static public inline function fromArray<T, R:T>(a:Array<R>)
+  static public inline function fromArray<T>(a:Array<T>)
     return new Vector<T>(cast a.copy());
 
   #if macro @:from #end
-  static public inline function fromMutable<T, R:T>(v:haxe.ds.Vector<R>)
+  static public inline function fromMutable<T>(v:haxe.ds.Vector<T>)
     return new Vector<T>(cast v.toArray());
 
   #if macro @:from #end
-  static public inline function fromIterable<T, R:T>(v:Iterable<R>)
+  static public inline function fromIterable<T>(v:Iterable<T>)
     return new Vector<T>([for (x in v) x]);
 
   @:to public inline function toArray()

@@ -14,12 +14,12 @@ class VectorTest {
     return asserts.done();
   }
 
-  public function casts() {
-    var a = [1, 2, 3, 4];
-    var v:Vector<Float> = (a:Vector<Int>);
-    var v:Vector<Float> = a;
-    return asserts.done();
-  }
+  // public function casts() {
+  //   var a = [1, 2, 3, 4];
+  //   var v:Vector<Float> = (a:Vector<Int>);
+  //   var v:Vector<Float> = (a:Array<Float>);
+  //   return asserts.done();
+  // }
 
   public function with() {
     var a:Vector<Int> = [1, 2, 3, 4];
